@@ -9,3 +9,4 @@ resource "aws_instance" "wb" {
   subnet_id                   = "subnet-05e77cd6231c44dfb"
   associate_public_ip_address = true
 }
+
