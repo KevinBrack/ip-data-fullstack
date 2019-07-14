@@ -21,3 +21,12 @@ resource "aws_lambda_function" "root" {
     }
   }
 }
+
+resource "aws_lambda_permission" "lambda_permission" {
+  statement_id = "AllowIpApiInvoke"
+  action = "lambda:InvokeFunction"
+  function_name = "${aws_lambda_function.root.function_name}"
+  principal = "apigateway.amazonaws.com"
+
+  source_arn = "${aws_api_gateway_rest_api.IpApi.execution_arn}/*/*/*"
+}
