@@ -13,7 +13,7 @@ resource "aws_lambda_function" "root" {
   # source_code_hash = "${base64sha256(file("lambda_function_payload.zip"))}"
   source_code_hash = "${filebase64sha256("${var.zip_01_root}")}"
 
-  runtime = "nodejs8.10"
+  runtime = "nodejs10.x"
 
   environment {
     variables = {
