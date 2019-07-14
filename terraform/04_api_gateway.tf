@@ -12,7 +12,7 @@ resource "aws_lb" "ip_lb" {
   name               = "${var.lb_name}"
   internal           = true
   load_balancer_type = "network"
-  subnets            = ["${var.pub_subnet_id}"]
+  subnets            = ["${var.pub_subnet_id[1]}"]
 }
 
 # resource "aws_api_gateway_vpc_link"
