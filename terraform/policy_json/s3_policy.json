@@ -7,6 +7,15 @@
       "Principal": "*",
       "Action": ["s3:GetObject"],
       "Resource": ["arn:aws:s3:::www.investigateip.net/*"]
+    },
+    {
+      "Action": "s3:GetObject",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E16BQ8BIC3BB7X"
+      },
+      "Resource": "arn:aws:s3:::www.investigateip.net/*",
+      "Sid": "2"
     }
   ]
 }
