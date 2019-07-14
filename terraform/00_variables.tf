@@ -28,7 +28,3 @@ variable "pub_subnet_id" {
     "2" = "subnet-00f25ec3f84a3b44c"
   }
 }
-
-variable "ubuntu_ami" {
-  default = "ami-0986c2ac728528ac2" 
-}
