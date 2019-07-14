@@ -1,15 +1,16 @@
+// file export = ip_root_payload.zip
+// Having trouble figuring out how to
+// actually have this be the root "/" endpoint
+// Renaming /root for the time being
+
 exports.handler = (event, context, callback) => {
 
-  var responseBody = {
-      "key3": "value3",
-      "key2": "value2",
-      "key1": "value1"
-  };
+  var responseBody = "Welcome to the ip challenge";
 
   var response = {
       "statusCode": 200,
       "headers": {
-          "my_header": "my_value"
+          "Access-Control-Allow-Origin": "*"
       },
       "body": JSON.stringify(responseBody),
       "isBase64Encoded": false
