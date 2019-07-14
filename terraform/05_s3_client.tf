@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "investigateip" {
-  bucket = "investigateip"
+  bucket = "www.investigateip.net"
   acl    = "public-read"
   policy = "${file("policy_json/s3_policy.json")}"
 
